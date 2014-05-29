@@ -1,10 +1,18 @@
 shinyUI(pageWithSidebar(
-  headerPanel('Iris k-means clustering'),
+  headerPanel('Cancer'),
   sidebarPanel(
-    selectInput('cancer', 'Cancer', names(Rate3)[-c(1,2)],selected=names(Rate3)[[3]]),
-    selectInput('tipo', 'Tipo de Dado', c("Quantidade","Rate","SMR"),selected="Quantidade",)
+    selectInput('cancer', 'Cancer', names(Rate3)[-c(1,2)],selected=names(Rate3)[[3]])
+
   ),
   mainPanel(
-    plotOutput('plot1')
+    
+    h4("Quantidade"),
+    plotOutput("plot2"),
+    
+    h4("Rate"),
+    plotOutput('plot1'),
+    
+    h4("SMR"),
+    plotOutput("plot3")
   )
 ))
