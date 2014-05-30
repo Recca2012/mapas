@@ -5,7 +5,7 @@ require(RCurl)
 u <- "https://raw.githubusercontent.com/Recca2012/mapas/master/mapas.R"
 script <- getURL(u, ssl.verifypeer = FALSE)
 eval(parse(text = script))
-load("data/dados.RData")
+#load("data/dados.RData")
 shinyServer(function(input, output, session) {
 
   # Combine the selected variables into a new data frame
