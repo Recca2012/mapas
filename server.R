@@ -1,6 +1,11 @@
 palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
           "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
-source("~/Dropbox/Dissertacao/reunioes/2014-05-28/mapas/mapas.R")
+require(RCurl)
+#source(getURL("https://raw.githubusercontent.com/Recca2012/mapas/master/mapas.R"))
+u <- "https://raw.githubusercontent.com/Recca2012/mapas/master/mapas.R"
+script <- getURL(u, ssl.verifypeer = FALSE)
+eval(parse(text = script))
+
 shinyServer(function(input, output, session) {
 
   # Combine the selected variables into a new data frame
