@@ -6,7 +6,7 @@ require(reshape)
 # down<-"https://dl.dropboxusercontent.com/u/77398697/Dissertacao/2014_05_28/dados.RData"
 # dest<-file.path(getwd(),"dados-download.RData")
 # download.file(down,dest,method="curl")
-load(file="data/dados.RData")
+load(file="mapas/data/dados.RData")
 # unlink(dest)
 plotar.mapa<-function(shape,dados){
   banco.plotar<-merge(shape,dados,by="State")
