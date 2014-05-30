@@ -5,7 +5,7 @@ require(RCurl)
 u <- "https://raw.githubusercontent.com/Recca2012/mapas/master/mapas.R"
 script <- getURL(u, ssl.verifypeer = FALSE)
 eval(parse(text = script))
-download.file("http://github.com/Recca2012/mapas/raw/master/data/dados.RData","dados.RData")
+#download.file("http://github.com/Recca2012/mapas/raw/master/data/dados.RData","dados.RData")
 load("dados.RData")
 shinyServer(function(input, output, session) {
 
